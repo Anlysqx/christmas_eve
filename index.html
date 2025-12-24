@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Eve 2025 ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --gold: #c9a959;
+            --gold-light: #e8d5a3;
+            --champagne: #f5e6d3;
+            --cream: #faf8f5;
+            --charcoal: #1a1a1a;
+            --warm-black: #0d0d0d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--warm-black);
+            color: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ============ HERO SECTION - NYC STYLE ============ */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Cinematic Background */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4) saturate(1.1);
+        }
+
+        /* Gradient Overlays for cinematic look */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 30%, transparent 60%, rgba(0,0,0,0.7) 100%),
+                linear-gradient(90deg, rgba(0,0,0,0.4) 0%, transparent 50%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
+        }
+
+        /* Bokeh/Light effects */
+        .bokeh-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bokeh {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: bokehFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes bokehFloat {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-20px) scale(1.1); opacity: 0.9; }
+        }
+
+        /* Snow Canvas */
+        #snow-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 40px;
+            max-width: 900px;
+        }
+
+        .pre-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeIn 2s ease 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 12vw, 9rem);
+            font-weight: 400;
+            background: linear-gradient(
+                135deg,
+                var(--gold) 0%,
+                var(--champagne) 25%,
+                #fff 50%,
+                var(--champagne) 75%,
+                var(--gold) 100%
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s ease infinite, fadeInUp 2s ease forwards;
+            filter: drop-shadow(0 0 60px rgba(201, 169, 89, 0.4));
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .sub-title {
+            font-family: 'Bodoni Moda', serif;
+            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            font-weight: 300;
+            font-style: italic;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 8px;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeIn 2s ease 1s forwards;
+        }
+
+        .for-you {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: rgba(255,255,255,0.9);
+            margin-top: 25px;
+            letter-spacing: 3px;
+            opacity: 0;
+            animation: fadeIn 2s ease 1.3s forwards;
+            text-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
+
+        .year {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            color: var(--gold);
+            margin-top: 20px;
+            letter-spacing: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease 1.5s forwards;
+            text-shadow: 0 0 40px rgba(201, 169, 89, 0.5);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            animation: fadeIn 2s ease 2s forwards, bounce 2s ease-in-out infinite 2s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 2px;
+            animation: scrollDot 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollDot {
+            0%, 100% { opacity: 1; top: 8px; }
+            50% { opacity: 0.3; top: 20px; }
+        }
+
+        /* ============ CONTENT SECTION ============ */
+        .content-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, var(--warm-black) 0%, #0a0a0a 50%, var(--warm-black) 100%);
+        }
+
+        /* NYC Skyline Silhouette */
+        .skyline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="%23111" d="M0,200 L0,180 L30,180 L30,160 L60,160 L60,140 L80,140 L80,100 L100,100 L100,80 L120,80 L120,60 L140,60 L140,80 L160,80 L160,100 L180,100 L180,120 L200,120 L200,100 L220,100 L220,140 L250,140 L250,120 L280,120 L280,80 L300,80 L300,60 L320,60 L320,40 L340,40 L340,30 L360,30 L360,40 L380,40 L380,60 L400,60 L400,100 L430,100 L430,80 L460,80 L460,120 L490,120 L490,140 L520,140 L520,100 L550,100 L550,80 L570,80 L570,50 L590,50 L590,30 L610,30 L610,20 L630,20 L630,30 L650,30 L650,50 L670,50 L670,80 L700,80 L700,60 L730,60 L730,90 L760,90 L760,70 L790,70 L790,110 L820,110 L820,90 L850,90 L850,60 L870,60 L870,40 L890,40 L890,25 L910,25 L910,15 L930,15 L930,25 L950,25 L950,40 L970,40 L970,70 L1000,70 L1000,50 L1030,50 L1030,80 L1060,80 L1060,100 L1090,100 L1090,120 L1120,120 L1120,90 L1150,90 L1150,110 L1180,110 L1180,80 L1210,80 L1210,100 L1240,100 L1240,130 L1270,130 L1270,110 L1300,110 L1300,140 L1330,140 L1330,120 L1360,120 L1360,150 L1400,150 L1400,170 L1440,170 L1440,200 Z"/></svg>') no-repeat bottom center;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        /* Luxury Card */
+        .luxury-card {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            width: 90%;
+            padding: 80px 60px;
+            background: linear-gradient(
+                145deg,
+                rgba(30, 30, 30, 0.9) 0%,
+                rgba(20, 20, 20, 0.95) 100%
+            );
+            border: 1px solid rgba(201, 169, 89, 0.2);
+            border-radius: 4px;
+            box-shadow: 
+                0 50px 100px -20px rgba(0,0,0,0.8),
+                inset 0 1px 0 rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(201, 169, 89, 0.1);
+            border-radius: 2px;
+            pointer-events: none;
+        }
+
+        /* Gold corner accents */
+        .corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: var(--gold);
+            border-style: solid;
+            opacity: 0.6;
+        }
+
+        .corner-tl { top: 30px; left: 30px; border-width: 2px 0 0 2px; }
+        .corner-tr { top: 30px; right: 30px; border-width: 2px 2px 0 0; }
+        .corner-bl { bottom: 30px; left: 30px; border-width: 0 0 2px 2px; }
+        .corner-br { bottom: 30px; right: 30px; border-width: 0 2px 2px 0; }
+
+        /* Poem */
+        .poem {
+            text-align: center;
+        }
+
+        .poem-line {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            line-height: 2.4;
+            color: rgba(255,255,255,0.85);
+            margin: 15px 0;
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .poem-line.visible {
+            animation: lineReveal 1s ease forwards;
+        }
+
+        @keyframes lineReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .subtle {
+            font-style: italic;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9em;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .divider-line {
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .divider-icon {
+            font-size: 1.2rem;
+            color: var(--gold);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* Signature */
+        .signature {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .signature-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            color: var(--gold);
+            text-shadow: 0 0 30px rgba(201, 169, 89, 0.4);
+        }
+
+        .signature-date {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 15px;
+        }
+
+        /* ============ FLOATING ELEMENTS ============ */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Avatar */
+        .avatar-wrapper {
+            position: fixed;
+            bottom: 100px;
+            right: 8%;
+            z-index: 51;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .avatar-frame {
+            position: relative;
+            padding: 6px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            border-radius: 50%;
+            animation: avatarFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--warm-black);
+            background: #f5f5f5;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-glow {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(201,169,89,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: glowPulse 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        /* Apple */
+        .apple-wrapper {
+            position: fixed;
+            bottom: 80px;
+            right: 22%;
+            z-index: 51;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        .apple {
+            font-size: 70px;
+            filter: drop-shadow(0 10px 25px rgba(200,50,50,0.4));
+            animation: appleSwing 4s ease-in-out infinite;
+            transition: transform 0.3s;
+        }
+
+        .apple:hover {
+            transform: scale(1.15) rotate(10deg);
+        }
+
+        @keyframes appleSwing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        /* Elegant Angel Silhouette */
+        .angel-wrapper {
+            position: fixed;
+            top: 18%;
+            right: 8%;
+            z-index: 51;
+            pointer-events: none;
+            animation: angelFloat 8s ease-in-out infinite;
+        }
+
+        .angel {
+            position: relative;
+            width: 80px;
+            height: 100px;
+            opacity: 0.6;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+        }
+
+        .angel svg {
+            width: 100%;
+            height: 100%;
+            fill: rgba(255,255,255,0.7);
+        }
+
+        @keyframes angelFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-25px) rotate(2deg); }
+        }
+
+        /* Medical Cross - elegant */
+        .medical-wrapper {
+            position: fixed;
+            bottom: 180px;
+            left: 15%;
+            z-index: 51;
+            pointer-events: none;
+            opacity: 0.5;
+            animation: medicalFloat 6s ease-in-out infinite;
+        }
+
+        .medical-cross {
+            width: 35px;
+            height: 35px;
+            position: relative;
+        }
+
+        .medical-cross::before,
+        .medical-cross::after {
+            content: '';
+            position: absolute;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .medical-cross::before {
+            width: 100%;
+            height: 30%;
+            top: 35%;
+            left: 0;
+        }
+
+        .medical-cross::after {
+            width: 30%;
+            height: 100%;
+            left: 35%;
+            top: 0;
+        }
+
+        @keyframes medicalFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        /* Christmas Tree - more elegant */
+        .tree-wrapper {
+            position: fixed;
+            bottom: 50px;
+            left: 5%;
+            z-index: 51;
+            pointer-events: auto;
+            cursor: pointer;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            animation: treeGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes treeGlow {
+            0%, 100% { filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 0 20px rgba(255,215,0,0.2)); }
+            50% { filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(255,215,0,0.4)); }
+        }
+
+        .tree-wrapper svg {
+            width: 130px;
+            height: auto;
+        }
+
+        /* Gifts */
+        .gifts-wrapper {
+            position: fixed;
+            bottom: 30px;
+            left: 7%;
+            display: flex;
+            gap: 10px;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        .gift {
+            width: 40px;
+            height: 35px;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            animation: giftBob 3s ease-in-out infinite;
+        }
+
+        .gift:nth-child(1) { background: linear-gradient(135deg, #c41e3a, #8b0000); animation-delay: 0s; }
+        .gift:nth-child(2) { background: linear-gradient(135deg, var(--gold), #9a7b2c); width: 35px; height: 40px; animation-delay: 0.4s; }
+        .gift:nth-child(3) { background: linear-gradient(135deg, #1e8449, #145a32); width: 30px; height: 30px; animation-delay: 0.8s; }
+
+        .gift::before, .gift::after {
+            content: '';
+            position: absolute;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .gift::before { width: 5px; height: 100%; left: 50%; transform: translateX(-50%); }
+        .gift::after { width: 100%; height: 5px; top: 50%; transform: translateY(-50%); }
+
+        @keyframes giftBob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* NYC Badge */
+        .nyc-badge {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+            opacity: 0;
+            animation: fadeIn 2s ease 2.5s forwards;
+        }
+
+        .nyc-badge span {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            display: inline-block;
+        }
+
+        /* ============ LOADING ============ */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--warm-black);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1.5s ease, visibility 1.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            animation: loadingPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes loadingPulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        .loading-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 30px;
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .loading-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: var(--gold);
+            animation: loadingProgress 2s ease forwards;
+        }
+
+        @keyframes loadingProgress {
+            to { width: 100%; }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .luxury-card {
+                padding: 50px 30px;
+            }
+
+            .corner { width: 25px; height: 25px; }
+            .corner-tl, .corner-tr { top: 20px; }
+            .corner-bl, .corner-br { bottom: 20px; }
+            .corner-tl, .corner-bl { left: 20px; }
+            .corner-tr, .corner-br { right: 20px; }
+
+            .avatar { width: 70px; height: 70px; }
+            .avatar-wrapper { right: 5%; bottom: 60px; }
+
+            .apple { font-size: 50px; }
+            .apple-wrapper { right: 18%; bottom: 50px; }
+
+            .tree-wrapper { left: 3%; bottom: 30px; }
+            .tree-wrapper svg { width: 90px; }
+
+            .gifts-wrapper { left: 5%; bottom: 20px; }
+            .gift { width: 28px; height: 25px; }
+
+            .nyc-badge { top: 15px; left: 15px; }
+            .nyc-badge span { font-size: 0.6rem; padding: 5px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-text">✨ Merry Christmas ✨</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Snow Canvas -->
+    <canvas id="snow-canvas"></canvas>
+
+    <!-- NYC Badge -->
+    <div class="nyc-badge">
+        <span>NEW YORK CITY</span>
+    </div>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero">
+        <!-- NYC Christmas Background - Rockefeller Center style -->
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=1920&q=80" 
+                 alt="NYC Christmas" 
+                 loading="eager"
+                 onerror="this.src='https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1920&q=80'">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <!-- Bokeh Lights -->
+        <div class="bokeh-container" id="bokeh"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p class="pre-title">December Twenty-Fourth</p>
+            <h1 class="main-title">Merry Christmas Eve</h1>
+            <p class="sub-title">A Night of Magic & Wonder</p>
+            <p class="for-you">for Duoduo ✨</p>
+            <p class="year">2025</p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ============ CONTENT SECTION ============ -->
+    <section class="content-section">
+        <!-- NYC Skyline -->
+        <div class="skyline"></div>
+
+        <!-- Luxury Card -->
+        <div class="luxury-card" id="card">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+
+            <div class="poem">
+                <p class="poem-line">When silent snow adorns the city lights</p>
+                <p class="poem-line">Some hearts are born to heal, to shine so bright</p>
+                <p class="poem-line">Like <span class="highlight">Jade</span>, so pure, that calms the restless soul</p>
+                <p class="poem-line">A journey starts where dreams become whole</p>
+                <p class="poem-line subtle">May your light guide those who need it most ✨</p>
+            </div>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <span class="divider-icon">❄</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="signature">
+                <p class="signature-text">Peace & Joy</p>
+                <p class="signature-date">CHRISTMAS EVE · MMXXV</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FLOATING ELEMENTS ============ -->
+    <div class="floating-elements">
+        <!-- Elegant Angel Silhouette -->
+        <div class="angel-wrapper">
+            <div class="angel">
+                <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Wings -->
+                    <ellipse cx="25" cy="55" rx="22" ry="35" fill="rgba(255,255,255,0.4)" transform="rotate(-15 25 55)"/>
+                    <ellipse cx="75" cy="55" rx="22" ry="35" fill="rgba(255,255,255,0.4)" transform="rotate(15 75 55)"/>
+                    <!-- Dress/Gown -->
+                    <path d="M50 45 Q35 70 30 110 L70 110 Q65 70 50 45" fill="rgba(255,255,255,0.6)"/>
+                    <!-- Head -->
+                    <circle cx="50" cy="30" r="14" fill="rgba(255,255,255,0.7)"/>
+                    <!-- Hair -->
+                    <ellipse cx="50" cy="25" rx="12" ry="8" fill="rgba(200,180,150,0.5)"/>
+                    <path d="M38 28 Q35 45 40 50" stroke="rgba(200,180,150,0.4)" stroke-width="3" fill="none"/>
+                    <path d="M62 28 Q65 45 60 50" stroke="rgba(200,180,150,0.4)" stroke-width="3" fill="none"/>
+                    <!-- Halo -->
+                    <ellipse cx="50" cy="12" rx="10" ry="3" fill="none" stroke="rgba(255,215,0,0.7)" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Medical Cross -->
+        <div class="medical-wrapper">
+            <div class="medical-cross"></div>
+        </div>
+
+        <!-- Christmas Tree -->
+        <div class="tree-wrapper" onclick="treeClick(event)">
+            <svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1a5f3c"/>
+                        <stop offset="100%" style="stop-color:#2d9d55"/>
+                    </linearGradient>
+                </defs>
+                <!-- Tree layers -->
+                <polygon points="50,5 30,40 70,40" fill="url(#treeGrad)"/>
+                <polygon points="50,20 20,65 80,65" fill="url(#treeGrad)"/>
+                <polygon points="50,40 10,100 90,100" fill="url(#treeGrad)"/>
+                <!-- Trunk -->
+                <rect x="40" y="100" width="20" height="30" fill="#4a3728" rx="2"/>
+                <!-- Star -->
+                <text x="50" y="12" font-size="16" text-anchor="middle" fill="#ffd700" style="filter: drop-shadow(0 0 8px gold);">⭐</text>
+                <!-- Ornaments -->
+                <circle cx="40" cy="30" r="4" fill="#ff4444" opacity="0.9"/>
+                <circle cx="60" cy="35" r="4" fill="#44ff44" opacity="0.9"/>
+                <circle cx="30" cy="52" r="4" fill="#ffd700" opacity="0.9"/>
+                <circle cx="70" cy="55" r="4" fill="#4444ff" opacity="0.9"/>
+                <circle cx="25" cy="78" r="4" fill="#ff69b4" opacity="0.9"/>
+                <circle cx="50" cy="75" r="4" fill="#ff8c00" opacity="0.9"/>
+                <circle cx="75" cy="82" r="4" fill="#ff4444" opacity="0.9"/>
+                <circle cx="35" cy="92" r="4" fill="#44ff44" opacity="0.9"/>
+                <circle cx="65" cy="95" r="4" fill="#ffd700" opacity="0.9"/>
+            </svg>
+        </div>
+
+        <!-- Gifts -->
+        <div class="gifts-wrapper">
+            <div class="gift"></div>
+            <div class="gift"></div>
+            <div class="gift"></div>
+        </div>
+
+        <!-- Apple -->
+        <div class="apple-wrapper" onclick="appleClick(event)">
+            <div class="apple">🍎</div>
+        </div>
+
+        <!-- Avatar -->
+        <div class="avatar-wrapper" onclick="avatarClick(event)">
+            <div class="avatar-glow"></div>
+            <div class="avatar-frame">
+                <div class="avatar">
+                    <img src="light.jpeg" alt="" onerror="this.style.display='none'; this.parentElement.innerHTML='🐶';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== SNOW ==========
+        const canvas = document.getElementById('snow-canvas');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnow = 120;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: -10,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1.5 + 0.5,
+                wind: Math.random() * 0.3 - 0.15,
+                opacity: Math.random() * 0.6 + 0.4
+            };
+        }
+
+        function drawSnow() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (snowflakes.length < maxSnow && Math.random() > 0.92) {
+                snowflakes.push(createSnowflake());
+            }
+
+            snowflakes.forEach((flake, i) => {
+                flake.y += flake.speed;
+                flake.x += flake.wind + Math.sin(flake.y * 0.01) * 0.3;
+
+                if (flake.y > canvas.height + 10) {
+                    snowflakes.splice(i, 1);
+                    return;
+                }
+
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(drawSnow);
+        }
+
+        // ========== BOKEH LIGHTS ==========
+        function createBokeh() {
+            const container = document.getElementById('bokeh');
+            const colors = ['rgba(255,215,0,0.4)', 'rgba(255,100,100,0.3)', 'rgba(100,255,100,0.3)', 'rgba(255,255,255,0.5)', 'rgba(200,150,255,0.3)'];
+
+            for (let i = 0; i < 25; i++) {
+                const bokeh = document.createElement('div');
+                bokeh.className = 'bokeh';
+                const size = Math.random() * 80 + 20;
+                bokeh.style.width = size + 'px';
+                bokeh.style.height = size + 'px';
+                bokeh.style.left = Math.random() * 100 + '%';
+                bokeh.style.top = Math.random() * 100 + '%';
+                bokeh.style.background = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]} 0%, transparent 70%)`;
+                bokeh.style.animationDelay = Math.random() * 5 + 's';
+                bokeh.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                container.appendChild(bokeh);
+            }
+        }
+
+        // ========== FIREWORKS ==========
+        function launchFirework(x, y) {
+            const colors = ['#ff6b6b', '#ffd700', '#00ff88', '#ff69b4', '#87ceeb', '#ff8c00', '#fff'];
+
+            confetti({
+                particleCount: 80,
+                spread: 60,
+                origin: { x: x / window.innerWidth, y: y / window.innerHeight },
+                colors: colors,
+                startVelocity: 40,
+                gravity: 1,
+                ticks: 250,
+                shapes: ['circle', 'square']
+            });
+
+            setTimeout(() => {
+                confetti({
+                    particleCount: 40,
+                    spread: 90,
+                    origin: { x: x / window.innerWidth, y: y / window.innerHeight },
+                    colors: ['#ffd700', '#fff'],
+                    startVelocity: 25,
+                    gravity: 0.6,
+                    scalar: 0.7,
+                    ticks: 180
+                });
+            }, 100);
+        }
+
+        function randomFirework() {
+            const x = Math.random() * window.innerWidth * 0.6 + window.innerWidth * 0.2;
+            const y = Math.random() * window.innerHeight * 0.4 + window.innerHeight * 0.1;
+            launchFirework(x, y);
+        }
+
+        // ========== INTERACTIONS ==========
+        function treeClick(e) {
+            e.stopPropagation();
+            const rect = e.currentTarget.getBoundingClientRect();
+            launchFirework(rect.left + rect.width / 2, rect.top);
+            setTimeout(() => launchFirework(rect.left, rect.top - 30), 200);
+            setTimeout(() => launchFirework(rect.right, rect.top - 30), 400);
+        }
+
+        function appleClick(e) {
+            e.stopPropagation();
+            const hearts = ['❤️', '💕', '💖', '💗', '💝', '🥰', '✨'];
+
+            for (let i = 0; i < 12; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.cssText = `
+                        position: fixed;
+                        left: ${e.clientX}px;
+                        top: ${e.clientY}px;
+                        font-size: ${Math.random() * 18 + 18}px;
+                        pointer-events: none;
+                        z-index: 1000;
+                    `;
+                    document.body.appendChild(heart);
+
+                    const angle = (i / 12) * Math.PI * 2;
+                    const distance = Math.random() * 100 + 60;
+
+                    gsap.to(heart, {
+                        x: Math.cos(angle) * distance,
+                        y: Math.sin(angle) * distance - 70,
+                        opacity: 0,
+                        scale: 1.4,
+                        rotation: Math.random() * 360,
+                        duration: 1,
+                        ease: 'power2.out',
+                        onComplete: () => heart.remove()
+                    });
+                }, i * 40);
+            }
+        }
+
+        function avatarClick(e) {
+            e.stopPropagation();
+            const frame = e.currentTarget.querySelector('.avatar-frame');
+
+            gsap.to(frame, {
+                scale: 1.15,
+                rotation: 8,
+                duration: 0.15,
+                yoyo: true,
+                repeat: 3,
+                ease: 'power2.inOut'
+            });
+
+            const emojis = ['💖', '🥰', '💕', '✨', '🌟', '💫'];
+            for (let i = 0; i < 6; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.textContent = emojis[i % emojis.length];
+                    emoji.style.cssText = `
+                        position: fixed;
+                        left: ${e.clientX}px;
+                        top: ${e.clientY}px;
+                        font-size: 28px;
+                        pointer-events: none;
+                        z-index: 1000;
+                    `;
+                    document.body.appendChild(emoji);
+
+                    gsap.to(emoji, {
+                        y: -90 - Math.random() * 40,
+                        x: (Math.random() - 0.5) * 70,
+                        opacity: 0,
+                        scale: 1.4,
+                        duration: 0.9,
+                        ease: 'power2.out',
+                        onComplete: () => emoji.remove()
+                    });
+                }, i * 70);
+            }
+        }
+
+        // ========== POEM ANIMATION ==========
+        function animatePoem() {
+            const lines = document.querySelectorAll('.poem-line');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(lines).indexOf(entry.target);
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 400);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            lines.forEach(line => observer.observe(line));
+        }
+
+        // ========== INIT ==========
+        function init() {
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            createBokeh();
+            drawSnow();
+            animatePoem();
+
+            // Hide loading
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+
+                // Initial fireworks
+                setTimeout(randomFirework, 1500);
+                setTimeout(randomFirework, 2500);
+            }, 2200);
+
+            // Periodic fireworks
+            setInterval(randomFirework, 6000);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+
+        // Click for firework
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.hero') || e.target.closest('.content-section')) {
+                launchFirework(e.clientX, e.clientY);
+            }
+        });
+    </script>
+</body>
+</html>
